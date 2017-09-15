@@ -1,0 +1,52 @@
+﻿@model ToDoList.Models.TaskModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TaskModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Priority)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Priority)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Complete)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Complete)
+        </dd>
+    </dl>
+</div>
+<div>
+    @if (Model.Complete != "Yes")
+    {
+        <a asp-action="Edit" asp-route-id="@Model.Guid">Edit</a><span> | </span>
+    }
+    <a asp-action="Index">Back to List</a>
+</div>
