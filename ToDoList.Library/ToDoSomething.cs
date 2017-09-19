@@ -6,11 +6,12 @@ namespace ToDoList.Library
     {
         public bool DoSomething(bool success)
         {
-            if (!success)
-            {
-                return DoSomething();
-            }
-            return success;
+            //if (!success)
+            //{
+            //    return DoSomething();
+            //}
+            //return success;
+            return true;
         }
         bool DoSomething()
         {
